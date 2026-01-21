@@ -3,8 +3,8 @@ const searchBtn = document.getElementById("searchBtn");
 function WeatherApp() {
   const cityName = document.getElementById("cityName");
   const storeName =
-    cityName.value.slice(0, 1).toUpperCase() +
-    cityName.value.slice(1).toLowerCase();
+    cityName.value.trim().slice(0, 1).toUpperCase() +
+    cityName.value.trim().slice(1).toLowerCase();
   let resultDiv = document.getElementById("placeholderText");
   try {
     const weatherApi = fetch(
